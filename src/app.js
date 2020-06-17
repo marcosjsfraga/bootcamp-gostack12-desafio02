@@ -80,7 +80,7 @@ app.post("/repositories/:id/like", (request, response) => {
 		return response.status(400).json({ error: 'Repository not found.'});
 	}
 
-	repositories[repoIndex].likes++;
+	repositories[repoIndex].likes += 1;
 
 	return response.json(repositories[repoIndex]);
 });
